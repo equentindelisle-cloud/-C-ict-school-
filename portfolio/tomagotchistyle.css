@@ -1,0 +1,113 @@
+:root{
+    --bg-1: #fff4e6;
+    --bg-2: #ffd9b3;
+    --accent: #ff8c00;
+    --accent-dark: #c45c00;
+    --text-dark: #3a2800;
+    --card-bg: rgba(255,255,255,0.75);
+}
+* { box-sizing: border-box; }
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: var(--text-dark);
+    background: linear-gradient(120deg, var(--bg-1), var(--bg-2), #ffe7c9);
+    background-size: 300% 300%;
+    justify-content: flex-start;
+    padding: 24px;
+    
+}
+
+
+
+.header {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: auto;
+    max-width: 300px;
+    padding: 12px 16px;
+    background: linear-gradient(180deg, rgba(255,140,0,0.15), rgba(255,140,0,0.08));
+    border-radius: 8px;
+    border: 2px solid var(--accent);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: left;
+    font-size: 14px;
+    color: var(--text-dark);
+    font-weight: 600;
+    z-index: 100;
+}
+
+
+.pet {
+    font-size: 96px;
+    text-align: center;
+    margin: 8px 0 12px;
+    line-height: 1;
+}
+
+.tomagotchi {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(96px, 160px));
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 0 20px;
+}
+
+button {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(180deg, var(--accent), var(--accent-dark));
+    box-shadow: 0 6px 0 rgba(196,92,0,0.9), 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.08s ease, box-shadow 0.08s ease, filter 0.12s ease;
+    min-width: 96px;
+    text-align: center;
+}
+
+button:hover {
+    filter: brightness(1.06);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.12);
+}
+
+button:focus {
+    outline: 3px solid rgba(255,140,0,0.25);
+    outline-offset: 2px;
+}
+
+.emojis {
+    max-width: 900px;
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px 14px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.5));
+    border-radius: 10px;
+    border: 1px solid rgba(196,92,0,0.12);
+    color: var(--text-dark);
+}
+
+.buttons > .reset-btn {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: 6px;
+}

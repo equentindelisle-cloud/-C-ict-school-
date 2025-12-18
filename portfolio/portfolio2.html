@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio – Quentin de l'Isle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio2.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>Quentin de l'Isle</h1>
+    <p>Student Techniek College Rotterdam · Front-end Developer in opleiding</p>
+  </header>
+
+  <main>
+    <section class="projects">
+      <div class="card">
+        <img src="https://picsum.photos/400/200?1" alt="Project 1">
+        <div class="card-content">
+          <h3>Terug naar hoofdpagina</h3>
+          <p>Een portfolio pagina</p>
+          <a href="portfolio.html">Bekijk pagina</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/400/200?2" alt="Project 2">
+        <div class="card-content">
+          <h3>professional skills</h3>
+          <p></p>
+          <a href="portfolio1.html">Bekijk skills</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/400/200?3" alt="Project 3">
+        <div class="card-content">
+          <h3>tomagotchi</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Vel possimus voluptatum tenetur officiis nemo est laboriosam tempore repellendus autem labore, magnam vitae
+            aspernatur natus, eius odit illo recusandae facere? Dolorum!</p>
+          <a href="tomagotchi.html">Bekijk project</a>
+        </div>
+      </div>
+    </section>
+
+    <aside>
+      <h2>Contact opnemen</h2>
+      <div class="contact-list">
+        <div class="contact-item">
+          <strong>Email</strong>
+          <span>quentindelisle@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <strong>nummer</strong>
+          <span>0643624144</span>
+        </div>
+        <div class="contact-item">
+          <strong>*coming soon*</strong>
+          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod reprehenderit magnam nihil odit quibusdam
+            harum quas aperiam neque tempora ducimus velit, sapiente officiis quo autem rerum excepturi ea, alias
+            incidunt!</span>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    © 2025 Quentin de l'Isle — Portfolio
+  </footer>
+
+
+
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies voorbeeld</title>
+  </head>
+
+  <body>
+
+    <div class="cookies">
+      <h1>Cookies voorbeeld</h1>
+      <button class="cnop" onclick="setCookie('gebruiker', 'Quentin', 7)">Zet cookie</button>
+      <button class="cnop" onclick="alert(getCookie('gebruiker'))">Lees cookie</button>
+      <button class="cnop" onclick="deleteCookie('gebruiker')">Verwijder cookie</button>
+      <button class="cnopsluit" onclick="sluitCookies()">Sluit cookies</button>
+
+    </div>
+    <script>
+
+      function setCookie(naam, waarde, dagen) {
+        const d = new Date();
+        d.setTime(d.getTime() + (dagen * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + d.toUTCString();
+        document.cookie = naam + "=" + waarde + ";" + expires + ";path=/";
+      }
+
+      function getCookie(naam) {
+        const naamEQ = naam + "=";
+        const cookies = document.cookie.split(';');
+        for (let c of cookies) {
+          c = c.trim();
+          if (c.indexOf(naamEQ) === 0) {
+            return c.substring(naamEQ.length, c.length);
+          }
+        }
+        return "";
+      }
+
+      function deleteCookie(naam) {
+        document.cookie = naam + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        alert("Cookie verwijderd!");
+      }
+
+      function sluitCookies() {
+        document.querySelector('.cookies').style.display = 'none';
+        console.log("Cookies gesloten");
+      }
+
+
+    </script>
+  </body>
+
+</html>
