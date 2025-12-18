@@ -23,7 +23,16 @@
       color: #e5e7eb;
       line-height: 1.6;
       padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
     }
+    
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
 
     header {
       max-width: fit-content;
@@ -47,14 +56,6 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 20px;
-    }
-
-    main {
-      max-width: fit-content;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 320px;
-      gap: 2rem;
     }
 
 
@@ -125,6 +126,7 @@ aside {
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
   position: sticky;
   top: 20px;
+  margin-top: 40px;
 }
 
 aside h2 {
